@@ -6,6 +6,7 @@ export const router = Router();
 router.get('/:role/:category', async (req: Request, res: Response) => {
   const role = req.params.role
   const category = req.params.category;
+  console.log(role, category)
   const condition = `${category}.${role}`;
 
   const champions = await getChampion(condition);

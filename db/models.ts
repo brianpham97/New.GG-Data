@@ -8,12 +8,12 @@ interface Attributes {
   supp?: Boolean;
 };
 
-export interface Skins {
+interface Skins {
   num: Number;
   name: String;
 };
 
-export interface Champs {
+interface Champs {
   name: String;
   meta?: Attributes;
   thirst?: Attributes;

@@ -1,7 +1,7 @@
 {
-  "name": "my-backend",
+  "name": "new.gg-backend",
   "version": "1.0.0",
-  "description": "MVP Backend",
+  "description": "New.GG Backend",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec ts-node server/index.ts",
