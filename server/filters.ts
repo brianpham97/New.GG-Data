@@ -15,6 +15,17 @@ export const filterChamp = (champs:any): any => {
   return filterSkins(filteredChamps);
 }
 
+export const shuffleChamps = (champs:any):any => {
+  const count = champs.length;
+  for (let i = 0; i < count; i++) {
+    let num = Math.floor(Math.random() * count);
+    let holder = champs[i];
+    champs[i] = champs[num]
+    champs[num] = holder;
+  }
+  return champs;
+}
+
 const filterSkins = (skins:any): any => {
   const filter = skins.map((champ:any) => {
     const length = champ.skins.length;

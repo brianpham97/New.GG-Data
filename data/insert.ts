@@ -494,7 +494,7 @@ export const data: Array<Data> = [
     { num: 23, name: 'DWG Jhin' }
   ] },
 
-  { name: 'Tristina', meta: {bot: true}, skins: [
+  { name: 'Tristana', meta: {bot: true}, skins: [
     { num: 0, name: 'default' },
     { num: 1, name: 'Riot Girl Tristana' },
     { num: 2, name: 'Earnest Elf Tristana' },
