@@ -1,15 +1,23 @@
 import { Router, Request, Response } from 'express';
-import { getChampion } from '../db/models';
+import { getChampion, allChampion } from '../db/models';
 import { filterChamp } from './filters'
 export const router = Router();
 
-router.get('/:role/:category', async (req: Request, res: Response) => {
-  const role = req.params.role
-  const category = req.params.category;
-  console.log(role, category)
-  const condition = `${category}.${role}`;
+router.get('/', async (req: Request, res: Response) => {
+  const role = req.query.role;
+  const category = req.query.category
+  if (role && category) {
+    const condition = `${category}.${role}`;
+    const champions = await getChampion(condition);
+    const filteredChampions = filterChamp(champions);
+    res.send(filteredChampions).status(200);
+  } else {
+    if (category) {
+      const condition = category + ''
+      const fetchAll = await allChampion(condition);
+      res.send(fetchAll).status(200)
+    }
+  }
 
-  const champions = await getChampion(condition);
-  const filteredChampions = filterChamp(champions);
-  res.send(filteredChampions).status(200);
+
 });
