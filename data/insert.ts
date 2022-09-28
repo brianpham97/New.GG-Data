@@ -1,28 +1,58 @@
-const data = [
-  { name: 'Mordekaiser', meta: {top: true}, skins: [
-    { num: 0, name: "default" },
-    { num: 1, name: "Dragon Knight Mordekaiser" },
-    { num: 2, name: "Infernal Mordekaiser" },
-    { num: 3, name: "Pentakill Mordekaiser" },
-    { num: 4, name: "Lord Mordekaiser" },
-    { num: 5, name: "King of Clubs Mordekaiser" },
-    { num: 6, name: "Dark Star Mordekaiser" },
-    { num: 13, name: "PROJECT: Mordekaiser" },
-    { num: 23, name: "Pentakill III: Lost Chapter Mordekaiser" },
-    { num: 32, name: "High Noon Mordekaiser" }
+interface Role {
+  top?: Boolean;
+  jung?: Boolean;
+  mid?: Boolean;
+  bot?: Boolean;
+  supp?: Boolean;
+}
+
+interface Skin {
+  num: Number;
+  name: String;
+}
+
+interface Data {
+  name: String;
+  meta?: Role;
+  thirst?: Role;
+  skins: Array<Skin>;
+}
+
+export const data: Array<Data> = [
+
+  { name: 'Teemo', meta: {top: true}, skins: [
+    { num: 0, name: 'default' },
+    { num: 1, name: 'Happy Elf Teemo' },
+    { num: 2, name: 'Recon Teemo' },
+    { num: 3, name: 'Badger Teemo' },
+    { num: 4, name: 'Astronaut Teemo' },
+    { num: 5, name: 'Cottontail Teemo' },
+    { num: 6, name: 'Super Teemo' },
+    { num: 7, name: 'Panda Teemo' },
+    { num: 8, name: 'Omega Squad Teemo' },
+    { num: 14, name: 'Little Devil Teemo' },
+    { num: 18, name: 'Beemo' },
+    { num: 25, name: 'Spirit Blossom Teemo' },
+    { num: 27, name: 'Prestige Spirit Blossom Teemo' },
+    { num: 37, name: 'Firecracker Teemo' }
   ] },
 
-  { name: 'Aatrox', meta: {top: true}, skins: [
-    { num: 0, name: "default" },
-    { num: 1, name: "Justicar Aatrox" },
-    { num: 2, name: "Mecha Aatrox" },
-    { num: 3, name: "Sea Hunter Aatrox" },
-    { num: 7, name: "Blood Moon Aatrox" },
-    { num: 8, name: "Prestige Blood Moon Aatrox" },
-    { num: 9, name: "Victorious Aatrox" },
-    { num: 11, name: "Odyssey Aatrox" },
-    { num: 20, name: "Prestige Blood Moon Aatrox (2022)" },
-    { num: 21, name: "Lunar Eclipse Aatrox" }
+  { name: 'Illaoi', meta: {top: true}, skins: [
+    { num: 0, name: 'default' },
+    { num: 1, name: 'Void Bringer Illaoi' },
+    { num: 2, name: 'Resistance Illaoi' },
+    { num: 10, name: 'Cosmic Invoker Illaoi' },
+    { num: 18, name: 'Snow Moon Illaoi' }
+  ] },
+
+  { name: 'Yorick', meta: {top: true}, skins: [
+    { num: 0, name: 'default' },
+    { num: 1, name: 'Undertaker Yorick' },
+    { num: 2, name: 'Pentakill Yorick' },
+    { num: 3, name: 'Arclight Yorick' },
+    { num: 4, name: 'Meowrick' },
+    { num: 12, name: 'Resistance Yorick' },
+    { num: 21, name: 'Pentakill III: Lost Chapter Yorick' }
   ] },
 
   { name: 'Garen', meta: {top: true}, skins: [
@@ -42,12 +72,18 @@ const data = [
     { num: 24, name: 'Battle Academia Garen' }
   ] },
 
-  { name: 'Illaoi', meta: {top: true}, skins: [
+  { name: 'DrMundo', meta: {top: true}, skins: [
     { num: 0, name: 'default' },
-    { num: 1, name: 'Void Bringer Illaoi' },
-    { num: 2, name: 'Resistance Illaoi' },
-    { num: 10, name: 'Cosmic Invoker Illaoi' },
-    { num: 18, name: 'Snow Moon Illaoi' }
+    { num: 1, name: 'Toxic Dr. Mundo' },
+    { num: 2, name: 'Mr. Mundoverse' },
+    { num: 3, name: 'Corporate Mundo' },
+    { num: 4, name: 'Mundo Mundo' },
+    { num: 5, name: 'Executioner Mundo' },
+    { num: 6, name: 'Rageborn Mundo' },
+    { num: 7, name: 'TPA Mundo' },
+    { num: 8, name: 'Pool Party Mundo' },
+    { num: 9, name: 'El Macho Mundo' },
+    { num: 10, name: 'Frozen Prince Mundo' }
   ] },
 
   { name: 'Maokai', meta: {top: true}, skins: [
@@ -63,51 +99,20 @@ const data = [
     { num: 24, name: 'Astronaut Maokai' }
   ] },
 
-  { name: 'Teemo', meta: {top: true}, skins: [
-    { num: 0, name: 'default' },
-    { num: 1, name: 'Happy Elf Teemo' },
-    { num: 2, name: 'Recon Teemo' },
-    { num: 3, name: 'Badger Teemo' },
-    { num: 4, name: 'Astronaut Teemo' },
-    { num: 5, name: 'Cottontail Teemo' },
-    { num: 6, name: 'Super Teemo' },
-    { num: 7, name: 'Panda Teemo' },
-    { num: 8, name: 'Omega Squad Teemo' },
-    { num: 14, name: 'Little Devil Teemo' },
-    { num: 18, name: 'Beemo' },
-    { num: 25, name: 'Spirit Blossom Teemo' },
-    { num: 27, name: 'Prestige Spirit Blossom Teemo' },
-    { num: 37, name: 'Firecracker Teemo' }
-  ] },
-
-  { name: 'Yorick', meta: {top: true}, skins: [
-    { num: 0, name: 'default' },
-    { num: 1, name: 'Undertaker Yorick' },
-    { num: 2, name: 'Pentakill Yorick' },
-    { num: 3, name: 'Arclight Yorick' },
-    { num: 4, name: 'Meowrick' },
-    { num: 12, name: 'Resistance Yorick' },
-    { num: 21, name: 'Pentakill III: Lost Chapter Yorick' }
-  ] },
-
   { name: 'Ornn', meta: {top: true}, skins: [
     { num: 0, name: 'default' },
     { num: 1, name: 'Thunder Lord Ornn' },
     { num: 2, name: 'Elderwood Ornn' }
   ] },
 
-  { name: 'Shen', meta: {top: true}, skins: [
+  { name: 'Urgot', meta: {top: true}, skins: [
     { num: 0, name: 'default' },
-    { num: 1, name: 'Frozen Shen' },
-    { num: 2, name: 'Yellow Jacket Shen' },
-    { num: 3, name: 'Surgeon Shen' },
-    { num: 4, name: 'Blood Moon Shen' },
-    { num: 5, name: 'Warlord Shen' },
-    { num: 6, name: 'TPA Shen' },
-    { num: 15, name: 'Pulsefire Shen' },
-    { num: 16, name: 'Infernal Shen' },
-    { num: 22, name: 'PsyOps Shen' },
-    { num: 40, name: 'Shockblade Shen' }
+    { num: 1, name: 'Giant Enemy Crabgot' },
+    { num: 2, name: 'Butcher Urgot' },
+    { num: 3, name: 'Battlecast Urgot' },
+    { num: 9, name: 'High Noon Urgot' },
+    { num: 15, name: 'Pajama Guardian Cosplay Urgot' },
+    { num: 23, name: 'Fright Night Urgot' }
   ] },
 
   { name: 'Fiora', thirst: {top: true}, skins: [
@@ -179,6 +184,11 @@ const data = [
     { num: 42, name: 'Debonair Master Yi' }
   ] },
 
+  { name: 'Belveth', meta: {jung: true}, skins: [
+    { num: 0, name: 'default' },
+    { num: 1, name: "Battle Boss Bel'Veth" }
+  ] },
+
   { name: 'Udyr', meta: {jung: true}, skins: [
     { num: 0, name: 'default' },
     { num: 1, name: 'Black Belt Udyr' },
@@ -186,25 +196,6 @@ const data = [
     { num: 3, name: 'Spirit Guard Udyr' },
     { num: 4, name: 'Definitely Not Udyr' },
     { num: 5, name: 'Dragon Oracle Udyr' }
-  ] },
-
-  { name: 'BelVeth', meta: {jung: true}, skins: [
-    { num: 0, name: 'default' },
-    { num: 1, name: "Battle Boss Bel'Veth" }
-  ] },
-
-  { name: 'Diana', meta: {jung: true}, skins: [
-    { num: 0, name: 'default' },
-    { num: 1, name: 'Dark Valkyrie Diana' },
-    { num: 2, name: 'Lunar Goddess Diana' },
-    { num: 3, name: 'Infernal Diana' },
-    { num: 11, name: 'Blood Moon Diana' },
-    { num: 12, name: 'Dark Waters Diana' },
-    { num: 18, name: 'Dragonslayer Diana' },
-    { num: 25, name: 'Battle Queen Diana' },
-    { num: 26, name: 'Prestige Battle Queen Diana' },
-    { num: 27, name: 'Sentinel Diana' },
-    { num: 37, name: 'Firecracker Diana' }
   ] },
 
   { name: 'Rammus', meta: {jung: true}, skins: [
@@ -221,18 +212,18 @@ const data = [
     { num: 17, name: 'Astronaut Rammus' }
   ] },
 
-  { name: 'Fiddlesticks', meta: {jung: true}, skins: [
+  { name: 'Diana', meta: {jung: true}, skins: [
     { num: 0, name: 'default' },
-    { num: 1, name: 'Spectral Fiddlesticks' },
-    { num: 2, name: 'Union Jack Fiddlesticks' },
-    { num: 3, name: 'Bandito Fiddlesticks' },
-    { num: 4, name: 'Pumpkinhead Fiddlesticks' },
-    { num: 5, name: 'Fiddle Me Timbers' },
-    { num: 6, name: 'Surprise Party Fiddlesticks' },
-    { num: 7, name: 'Dark Candy Fiddlesticks' },
-    { num: 8, name: 'Risen Fiddlesticks' },
-    { num: 9, name: 'Praetorian Fiddlesticks' },
-    { num: 27, name: 'Star Nemesis Fiddlesticks' }
+    { num: 1, name: 'Dark Valkyrie Diana' },
+    { num: 2, name: 'Lunar Goddess Diana' },
+    { num: 3, name: 'Infernal Diana' },
+    { num: 11, name: 'Blood Moon Diana' },
+    { num: 12, name: 'Dark Waters Diana' },
+    { num: 18, name: 'Dragonslayer Diana' },
+    { num: 25, name: 'Battle Queen Diana' },
+    { num: 26, name: 'Prestige Battle Queen Diana' },
+    { num: 27, name: 'Sentinel Diana' },
+    { num: 37, name: 'Firecracker Diana' }
   ] },
 
   { name: 'Nocturne', meta: {jung: true}, skins: [
@@ -245,14 +236,6 @@ const data = [
     { num: 6, name: 'Cursed Revenant Nocturne' },
     { num: 7, name: 'Old God Nocturne' },
     { num: 16, name: 'Hextech Nocturne' }
-  ] },
-
-  { name: 'Zac', meta: {jung: true}, skins: [
-    { num: 0, name: 'default' },
-    { num: 1, name: 'Special Weapon Zac' },
-    { num: 2, name: 'Pool Party Zac' },
-    { num: 6, name: 'SKT T1 Zac' },
-    { num: 7, name: 'Battlecast Zac' }
   ] },
 
   { name: 'Warwick', meta: {jung: true}, skins: [
@@ -316,7 +299,7 @@ const data = [
     { num: 31, name: 'Prestige K/DA Evelynn (2022)' }
   ] },
 
-  { name: 'Kayne', thirst: {jung: true}, skins: [
+  { name: 'Kayn', thirst: {jung: true}, skins: [
     { num: 0, name: 'default' },
     { num: 1, name: 'Soulhunter Kayn' },
     { num: 2, name: 'Odyssey Kayn' },
@@ -361,6 +344,37 @@ const data = [
     { num: 14, name: 'High Noon Viktor' }
   ] },
 
+  { name: 'Malzahar', meta: {mid: true}, skins: [
+    { num: 0, name: 'default' },
+    { num: 1, name: 'Vizier Malzahar' },
+    { num: 2, name: 'Shadow Prince Malzahar' },
+    { num: 3, name: 'Djinn Malzahar' },
+    { num: 4, name: 'Overlord Malzahar' },
+    { num: 5, name: 'Snow Day Malzahar' },
+    { num: 6, name: 'Battle Boss Malzahar' },
+    { num: 7, name: 'Hextech Malzahar' },
+    { num: 9, name: 'Worldbreaker Malzahar' },
+    { num: 18, name: 'Beezahar' },
+    { num: 28, name: 'Debonair Malzahar' }
+  ] },
+
+  { name: 'Veigar', meta: {mid: true}, skins: [
+    { num: 0, name: 'default' },
+    { num: 1, name: 'White Mage Veigar' },
+    { num: 2, name: 'Curling Veigar' },
+    { num: 3, name: 'Veigar Greybeard' },
+    { num: 4, name: 'Leprechaun Veigar' },
+    { num: 5, name: 'Baron Von Veigar' },
+    { num: 6, name: 'Superb Villain Veigar' },
+    { num: 7, name: 'Bad Santa Veigar' },
+    { num: 8, name: 'Final Boss Veigar' },
+    { num: 9, name: 'Omega Squad Veigar' },
+    { num: 13, name: 'Elderwood Veigar' },
+    { num: 23, name: 'Furyhorn Cosplay Veigar' },
+    { num: 32, name: 'Astronaut Veigar' },
+    { num: 41, name: 'Monster Tamer Veigar' }
+  ] },
+
   { name: 'Vladimir', meta: {mid: true}, skins: [
     { num: 0, name: 'default' },
     { num: 1, name: 'Count Vladimir' },
@@ -376,43 +390,18 @@ const data = [
     { num: 30, name: 'Cafe Cuties Vladimir' }
   ] },
 
-  { name: 'Swain', meta: {mid: true}, skins: [
+  { name: 'Heimerdinger', meta: {mid: true}, skins: [
     { num: 0, name: 'default' },
-    { num: 1, name: 'Northern Front Swain' },
-    { num: 2, name: 'Bilgewater Swain' },
-    { num: 3, name: 'Tyrant Swain' },
-    { num: 4, name: 'Dragon Master Swain' },
-    { num: 11, name: 'Hextech Swain' },
-    { num: 12, name: 'Crystal Rose Swain' }
+    { num: 1, name: 'Alien Invader Heimerdinger' },
+    { num: 2, name: 'Blast Zone Heimerdinger' },
+    { num: 3, name: 'Piltover Customs Heimerdinger' },
+    { num: 4, name: 'Snowmerdinger' },
+    { num: 5, name: 'Hazmat Heimerdinger' },
+    { num: 6, name: 'Dragon Trainer Heimerdinger' },
+    { num: 15, name: 'Pool Party Heimerdinger' },
+    { num: 24, name: 'Heimerstinger' }
   ] },
 
-  { name: 'Malzahar', meta: {mid: true}, skins: [
-    { num: 0, name: 'default' },
-    { num: 1, name: 'Vizier Malzahar' },
-    { num: 2, name: 'Shadow Prince Malzahar' },
-    { num: 3, name: 'Djinn Malzahar' },
-    { num: 4, name: 'Overlord Malzahar' },
-    { num: 5, name: 'Snow Day Malzahar' },
-    { num: 6, name: 'Battle Boss Malzahar' },
-    { num: 7, name: 'Hextech Malzahar' },
-    { num: 9, name: 'Worldbreaker Malzahar' },
-    { num: 18, name: 'Beezahar' },
-    { num: 28, name: 'Debonair Malzahar' }
-  ] },
-
-  { name: 'Anivia', meta: {mid: true}, skins: [
-    { num: 0, name: 'default' },
-    { num: 1, name: 'Team Spirit Anivia' },
-    { num: 2, name: 'Bird of Prey Anivia' },
-    { num: 3, name: 'Noxus Hunter Anivia' },
-    { num: 4, name: 'Hextech Anivia' },
-    { num: 5, name: 'Blackfrost Anivia' },
-    { num: 6, name: 'Prehistoric Anivia' },
-    { num: 7, name: 'Festival Queen Anivia' },
-    { num: 8, name: 'Papercraft Anivia' },
-    { num: 17, name: 'Cosmic Flight Anivia' },
-    { num: 27, name: 'Divine Phoenix Anivia' }
-  ] },
 
   { name: 'Zoe', thirst: {mid: true}, skins: [
     { num: 0, name: 'default' },
@@ -505,22 +494,37 @@ const data = [
     { num: 23, name: 'DWG Jhin' }
   ] },
 
-  { name: 'Sivir', meta: {bot: true}, skins: [
+  { name: 'Tristina', meta: {bot: true}, skins: [
     { num: 0, name: 'default' },
-    { num: 1, name: 'Warrior Princess Sivir' },
-    { num: 2, name: 'Spectacular Sivir' },
-    { num: 3, name: 'Huntress Sivir' },
-    { num: 4, name: 'Bandit Sivir' },
-    { num: 5, name: 'PAX Sivir' },
-    { num: 6, name: 'Snowstorm Sivir' },
-    { num: 7, name: 'Warden Sivir' },
-    { num: 8, name: 'Victorious Sivir' },
-    { num: 9, name: 'Neo PAX Sivir' },
-    { num: 10, name: 'Pizza Delivery Sivir' },
-    { num: 16, name: 'Blood Moon Sivir' },
-    { num: 25, name: 'Odyssey Sivir' },
-    { num: 34, name: 'Cafe Cuties Sivir' },
-    { num: 43, name: 'Solar Eclipse Sivir' }
+    { num: 1, name: 'Riot Girl Tristana' },
+    { num: 2, name: 'Earnest Elf Tristana' },
+    { num: 3, name: 'Firefighter Tristana' },
+    { num: 4, name: 'Guerilla Tristana' },
+    { num: 5, name: 'Buccaneer Tristana' },
+    { num: 6, name: 'Rocket Girl Tristana' },
+    { num: 10, name: 'Dragon Trainer Tristana' },
+    { num: 11, name: 'Bewitching Tristana' },
+    { num: 12, name: 'Omega Squad Tristana' },
+    { num: 24, name: 'Little Demon Tristana' },
+    { num: 33, name: 'Pengu Cosplay Tristana' },
+    { num: 40, name: 'Hextech Tristana' },
+    { num: 41, name: 'Firecracker Tristana' }
+  ] },
+
+  { name: 'Twitch', meta: {bot: true}, skins: [
+    { num: 0, name: 'default' },
+    { num: 1, name: 'Kingpin Twitch' },
+    { num: 2, name: 'Whistler Village Twitch' },
+    { num: 3, name: 'Medieval Twitch' },
+    { num: 4, name: 'Crime City Twitch' },
+    { num: 5, name: 'Vandal Twitch' },
+    { num: 6, name: 'Pickpocket Twitch' },
+    { num: 7, name: 'SSW Twitch' },
+    { num: 8, name: 'Omega Squad Twitch' },
+    { num: 12, name: 'Ice King Twitch' },
+    { num: 27, name: 'Twitch Shadowfoot' },
+    { num: 36, name: 'Dragonslayer Twitch' },
+    { num: 45, name: 'High Noon Twitch' }
   ] },
 
   { name: 'Ashe', meta: {bot: true}, skins: [
@@ -539,23 +543,6 @@ const data = [
     { num: 23, name: 'Fae Dragon Ashe' },
     { num: 32, name: 'Coven Ashe' },
     { num: 43, name: 'Ocean Song Ashe' }
-  ] },
-
-  { name: 'Tristina', meta: {bot: true}, skins: [
-    { num: 0, name: 'default' },
-    { num: 1, name: 'Riot Girl Tristana' },
-    { num: 2, name: 'Earnest Elf Tristana' },
-    { num: 3, name: 'Firefighter Tristana' },
-    { num: 4, name: 'Guerilla Tristana' },
-    { num: 5, name: 'Buccaneer Tristana' },
-    { num: 6, name: 'Rocket Girl Tristana' },
-    { num: 10, name: 'Dragon Trainer Tristana' },
-    { num: 11, name: 'Bewitching Tristana' },
-    { num: 12, name: 'Omega Squad Tristana' },
-    { num: 24, name: 'Little Demon Tristana' },
-    { num: 33, name: 'Pengu Cosplay Tristana' },
-    { num: 40, name: 'Hextech Tristana' },
-    { num: 41, name: 'Firecracker Tristana' }
   ] },
 
   { name: 'Ezreal', thirst: {bot: true}, skins: [
@@ -642,6 +629,32 @@ const data = [
     { num: 50, name: 'Star Nemesis Morgana' }
   ] },
 
+  { name: 'Brand', meta: {supp: true}, skins: [
+    { num: 0, name: 'default' },
+    { num: 1, name: 'Apocalyptic Brand' },
+    { num: 2, name: 'Vandal Brand' },
+    { num: 3, name: 'Cryocore Brand' },
+    { num: 4, name: 'Zombie Brand' },
+    { num: 5, name: 'Spirit Fire Brand' },
+    { num: 6, name: 'Battle Boss Brand' },
+    { num: 7, name: 'Arclight Brand' },
+    { num: 8, name: 'Eternal Dragon Brand' },
+    { num: 21, name: 'Debonair Brand' },
+    { num: 22, name: 'Prestige Debonair Brand' }
+  ] },
+
+  { name: 'Zyra', meta: {supp: true}, skins: [
+    { num: 0, name: 'default' },
+    { num: 1, name: 'Wildfire Zyra' },
+    { num: 2, name: 'Haunted Zyra' },
+    { num: 3, name: 'SKT T1 Zyra' },
+    { num: 4, name: 'Dragon Sorceress Zyra' },
+    { num: 5, name: 'Coven Zyra' },
+    { num: 6, name: 'Prestige Coven Zyra' },
+    { num: 7, name: 'Crystal Rose Zyra' },
+    { num: 16, name: 'Crime City Nightmare Zyra' }
+  ] },
+
   { name: 'Blitzcrank', meta: {supp: true}, skins: [
     { num: 0, name: 'default' },
     { num: 1, name: 'Rusty Blitzcrank' },
@@ -659,46 +672,33 @@ const data = [
     { num: 36, name: 'Victorious Blitzcrank' },
     { num: 47, name: 'Zenith Games Blitzcrank' }
   ] },
-  { name: 'Zyra', meta: {supp: true}, skins: [
+
+  { name: 'Xerath', meta: {supp: true}, skins: [
     { num: 0, name: 'default' },
-    { num: 1, name: 'Wildfire Zyra' },
-    { num: 2, name: 'Haunted Zyra' },
-    { num: 3, name: 'SKT T1 Zyra' },
-    { num: 4, name: 'Dragon Sorceress Zyra' },
-    { num: 5, name: 'Coven Zyra' },
-    { num: 6, name: 'Prestige Coven Zyra' },
-    { num: 7, name: 'Crystal Rose Zyra' },
-    { num: 16, name: 'Crime City Nightmare Zyra' }
+    { num: 1, name: 'Runeborn Xerath' },
+    { num: 2, name: 'Battlecast Xerath' },
+    { num: 3, name: 'Scorched Earth Xerath' },
+    { num: 4, name: 'Guardian of the Sands Xerath' },
+    { num: 5, name: 'Dark Star Xerath' },
+    { num: 12, name: 'Arcana Xerath' }
   ] },
 
-  { name: 'Nami', meta: {supp: true}, skins: [
+  { name: 'Leona', meta: {supp: true}, skins: [
     { num: 0, name: 'default' },
-    { num: 1, name: 'Koi Nami' },
-    { num: 2, name: 'River Spirit Nami' },
-    { num: 3, name: 'Urf the Nami-tee' },
-    { num: 7, name: 'Deep Sea Nami' },
-    { num: 8, name: 'SKT T1 Nami' },
-    { num: 9, name: 'Program Nami' },
-    { num: 15, name: 'Splendid Staff Nami' },
-    { num: 24, name: 'Cosmic Destiny Nami' },
-    { num: 32, name: 'Bewitching Nami' }
-  ] },
-
-  { name: 'Soraka', meta: {supp: true}, skins: [
-    { num: 0, name: 'default' },
-    { num: 1, name: 'Dryad Soraka' },
-    { num: 2, name: 'Divine Soraka' },
-    { num: 3, name: 'Celestine Soraka' },
-    { num: 4, name: 'Reaper Soraka' },
-    { num: 5, name: 'Order of the Banana Soraka' },
-    { num: 6, name: 'Program Soraka' },
-    { num: 7, name: 'Star Guardian Soraka' },
-    { num: 8, name: 'Pajama Guardian Soraka' },
-    { num: 9, name: 'Winter Wonder Soraka' },
-    { num: 15, name: 'Dawnbringer Soraka' },
-    { num: 16, name: 'Nightbringer Soraka' },
-    { num: 17, name: 'Prestige Star Guardian Soraka' },
-    { num: 18, name: 'Cafe Cuties Soraka' }
+    { num: 1, name: 'Valkyrie Leona' },
+    { num: 2, name: 'Defender Leona' },
+    { num: 3, name: 'Iron Solari Leona' },
+    { num: 4, name: 'Pool Party Leona' },
+    { num: 8, name: 'PROJECT: Leona' },
+    { num: 9, name: 'Barbecue Leona' },
+    { num: 10, name: 'Solar Eclipse Leona' },
+    { num: 11, name: 'Lunar Eclipse Leona' },
+    { num: 12, name: 'Mecha Kingdoms Leona' },
+    { num: 21, name: 'Battle Academia Leona' },
+    { num: 22, name: 'DWG Leona' },
+    { num: 23, name: 'Prestige Battle Academia Leona' },
+    { num: 33, name: 'Debonair Leona' },
+    { num: 34, name: 'High Noon Leona' }
   ] },
 
   { name: 'Taric', thirst: {supp: true}, skins: [
@@ -723,6 +723,36 @@ const data = [
     { num: 17, name: 'PsyOps Sona' },
     { num: 26, name: 'Pentakill III: Lost Chapter Sona' },
     { num: 35, name: 'Star Guardian Sona' }
+  ] },
+
+  { name: 'Soraka', thirst: {supp: true}, skins: [
+    { num: 0, name: 'default' },
+    { num: 1, name: 'Dryad Soraka' },
+    { num: 2, name: 'Divine Soraka' },
+    { num: 3, name: 'Celestine Soraka' },
+    { num: 4, name: 'Reaper Soraka' },
+    { num: 5, name: 'Order of the Banana Soraka' },
+    { num: 6, name: 'Program Soraka' },
+    { num: 7, name: 'Star Guardian Soraka' },
+    { num: 8, name: 'Pajama Guardian Soraka' },
+    { num: 9, name: 'Winter Wonder Soraka' },
+    { num: 15, name: 'Dawnbringer Soraka' },
+    { num: 16, name: 'Nightbringer Soraka' },
+    { num: 17, name: 'Prestige Star Guardian Soraka' },
+    { num: 18, name: 'Cafe Cuties Soraka' }
+  ] },
+
+  { name: 'Mordekaiser', meta: {top: true, jung: true}, skins: [
+    { num: 0, name: "default" },
+    { num: 1, name: "Dragon Knight Mordekaiser" },
+    { num: 2, name: "Infernal Mordekaiser" },
+    { num: 3, name: "Pentakill Mordekaiser" },
+    { num: 4, name: "Lord Mordekaiser" },
+    { num: 5, name: "King of Clubs Mordekaiser" },
+    { num: 6, name: "Dark Star Mordekaiser" },
+    { num: 13, name: "PROJECT: Mordekaiser" },
+    { num: 23, name: "Pentakill III: Lost Chapter Mordekaiser" },
+    { num: 32, name: "High Noon Mordekaiser" }
   ] },
 
   { name: 'Sett', meta: {top: true, mid: true}, thirst: {top: true, mid: true}, skins: [
@@ -766,14 +796,14 @@ const data = [
     { num: 34, name: 'Porcelain Amumu' }
   ] },
 
-  { name: 'Xerath', meta: {mid: true, supp: true}, skins: [
+  { name: 'Swain', meta: {mid: true, supp: true}, skins: [
     { num: 0, name: 'default' },
-    { num: 1, name: 'Runeborn Xerath' },
-    { num: 2, name: 'Battlecast Xerath' },
-    { num: 3, name: 'Scorched Earth Xerath' },
-    { num: 4, name: 'Guardian of the Sands Xerath' },
-    { num: 5, name: 'Dark Star Xerath' },
-    { num: 12, name: 'Arcana Xerath' }
+    { num: 1, name: 'Northern Front Swain' },
+    { num: 2, name: 'Bilgewater Swain' },
+    { num: 3, name: 'Tyrant Swain' },
+    { num: 4, name: 'Dragon Master Swain' },
+    { num: 11, name: 'Hextech Swain' },
+    { num: 12, name: 'Crystal Rose Swain' }
   ] },
 
   { name: 'Lux', meta: {supp: true}, thirst: {mid: true, supp: true}, skins: [
@@ -818,24 +848,6 @@ const data = [
     { num: 33, name: 'Prestige Bewitching Miss Fortune (2022)' }
   ] },
 
-  { name: 'Leona', meta: {supp: true}, thirst: {supp: true}, skins: [
-    { num: 0, name: 'default' },
-    { num: 1, name: 'Valkyrie Leona' },
-    { num: 2, name: 'Defender Leona' },
-    { num: 3, name: 'Iron Solari Leona' },
-    { num: 4, name: 'Pool Party Leona' },
-    { num: 8, name: 'PROJECT: Leona' },
-    { num: 9, name: 'Barbecue Leona' },
-    { num: 10, name: 'Solar Eclipse Leona' },
-    { num: 11, name: 'Lunar Eclipse Leona' },
-    { num: 12, name: 'Mecha Kingdoms Leona' },
-    { num: 21, name: 'Battle Academia Leona' },
-    { num: 22, name: 'DWG Leona' },
-    { num: 23, name: 'Prestige Battle Academia Leona' },
-    { num: 33, name: 'Debonair Leona' },
-    { num: 34, name: 'High Noon Leona' }
-  ] },
-
   { name: 'Janna', meta: {supp: true}, thirst: {supp: true}, skins: [
   { num: 0, name: 'default' },
   { num: 1, name: 'Tempest Janna' },
@@ -864,5 +876,3 @@ const data = [
     { num: 15, name: 'Prestige Ocean Song Seraphine' }
   ] }
 ]
-
-module.exports = data;
