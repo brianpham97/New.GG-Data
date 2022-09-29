@@ -1,4 +1,6 @@
-export const filterChamp = (champs:any): any => {
+import { Champs, Final } from "../interface";
+
+export const filterChamp = (champs:Champs[]): Final[] => {
   let count = 3;
   let filteredChamps = [];
 
@@ -15,7 +17,7 @@ export const filterChamp = (champs:any): any => {
   return filterSkins(filteredChamps);
 }
 
-export const shuffleChamps = (champs:any):any => {
+export const shuffleChamps = (champs:String[]):String[] => {
   const count = champs.length;
   for (let i = 0; i < count; i++) {
     let num = Math.floor(Math.random() * count);
@@ -26,8 +28,8 @@ export const shuffleChamps = (champs:any):any => {
   return champs;
 }
 
-const filterSkins = (skins:any): any => {
-  const filter = skins.map((champ:any) => {
+const filterSkins = (skins:Champs[]): Final[] => {
+  const filter = skins.map((champ:Champs) => {
     const length = champ.skins.length;
     const random = (Math.floor(Math.random() * length));
     let skin = champ.skins[random];

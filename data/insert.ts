@@ -1,24 +1,6 @@
-interface Role {
-  top?: Boolean;
-  jung?: Boolean;
-  mid?: Boolean;
-  bot?: Boolean;
-  supp?: Boolean;
-}
+import {Champs} from '../interface';
 
-interface Skin {
-  num: Number;
-  name: String;
-}
-
-interface Data {
-  name: String;
-  meta?: Role;
-  thirst?: Role;
-  skins: Array<Skin>;
-}
-
-export const data: Array<Data> = [
+export const data: Array<Champs> = [
 
   { name: 'Teemo', meta: {top: true}, skins: [
     { num: 0, name: 'default' },

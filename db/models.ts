@@ -1,24 +1,5 @@
 import { Champions } from './schema';
-
-interface Attributes {
-  top?: Boolean;
-  jung?: Boolean;
-  mid?: Boolean;
-  bot?: Boolean;
-  supp?: Boolean;
-};
-
-interface Skins {
-  num: Number;
-  name: String;
-};
-
-interface Champs {
-  name: String;
-  meta?: Attributes;
-  thirst?: Attributes;
-  skins: Array<Skins>;
-};
+import {Skins, Champs} from '../interface';
 
 export async function getChampion(condition:string): Promise<Champs[] | void> {
   try {
