@@ -2,6 +2,14 @@
 
 Server for [New.GG](https://github.com/brianpham97/New.GG-Front)
 
+## Available Scripts
+```sh
+npm install
+```
+
+Rename `example.env` in to `.env`\
+Update PORT and DB_NAME in `.env` if needed\
+
 ## Technologies Used
 
 ### Back End Development
