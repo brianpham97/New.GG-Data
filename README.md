@@ -2,6 +2,7 @@
 
 Server and database to power [New.GG](https://github.com/brianpham97/New.GG-Front) application.\
 <img width="36" alt="league_of_legends_macos_bigsur_icon_190030" src="https://user-images.githubusercontent.com/107714292/193166339-a618dd05-a2ab-4252-8eab-e4c484b83e3b.png">
+![league-of-legends-logo-icon-22](https://user-images.githubusercontent.com/107714292/193166360-411b7139-4aa2-453d-ac9e-ae39e0b09382.jpg)
 
 
 ## Available Scripts
