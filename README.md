@@ -1,6 +1,6 @@
 # Overview
 
-Server for [New.GG](https://github.com/brianpham97/New.GG-Front)
+Server and database to power [New.GG](https://github.com/brianpham97/New.GG-Front) application.
 
 ## Available Scripts
 Install required dependencies
