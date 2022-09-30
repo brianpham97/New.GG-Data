@@ -32,3 +32,8 @@ npm run load-data
 
 ### External API: [DataDragon](https://developer.riotgames.com/docs/lol)
 <img src="https://user-images.githubusercontent.com/107714292/193166997-d19aff29-67e0-427e-9c1c-291d2cb89e2b.png" width="50" height="50">
+
+### Connect with me
+
+[![Linkedin: LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/lbrian-phaml/)](https://www.linkedin.com/in/lbrian-phaml/)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white&link=https://github.com/brianpham97)](https://github.com/brianpham97)
