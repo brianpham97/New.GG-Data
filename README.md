@@ -3,20 +3,20 @@
 Server for [New.GG](https://github.com/brianpham97/New.GG-Front)
 
 ## Available Scripts
-Install required dependencies\
+Install required dependencies
 ```sh
 npm install
 ```
 
 Rename `example.env` in to `.env`\
-Update `PORT` and `DB_NAME` in .env if needed\
+Update `PORT` and `DB_NAME` in .env if needed
 
-Start the server\
+Start the server
 ```sh
 npm run start
 ```
 
-Load data into existing database\
+Load data into existing database
 ```sh
 npm run load-data
 ```
