@@ -8,7 +8,7 @@ Install required dependencies
 npm install
 ```
 
-Rename `example.env` in to `.env`\
+Rename `example.env` to `.env`\
 Update `PORT` and `DB_NAME` in .env if needed
 
 Start the server
