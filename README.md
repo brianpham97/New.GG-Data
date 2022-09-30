@@ -1,6 +1,8 @@
 # Overview
 
-Server and database to power [New.GG](https://github.com/brianpham97/New.GG-Front) application.
+Server and database to power [New.GG](https://github.com/brianpham97/New.GG-Front) application.\
+<img width="36" alt="league_of_legends_macos_bigsur_icon_190030" src="https://user-images.githubusercontent.com/107714292/193166339-a618dd05-a2ab-4252-8eab-e4c484b83e3b.png">
+
 
 ## Available Scripts
 Install required dependencies
