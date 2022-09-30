@@ -30,4 +30,5 @@ npm run load-data
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
-### External API: [DataDragon](https://developer.riotgames.com/docs/lol) <img src="https://user-images.githubusercontent.com/107714292/193166997-d19aff29-67e0-427e-9c1c-291d2cb89e2b.png" width="50" height="50">
+### External API: [DataDragon](https://developer.riotgames.com/docs/lol)
+<img src="https://user-images.githubusercontent.com/107714292/193166997-d19aff29-67e0-427e-9c1c-291d2cb89e2b.png" width="50" height="50">
